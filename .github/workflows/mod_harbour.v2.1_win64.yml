@@ -62,7 +62,7 @@ jobs:
           echo "::set-output name=modversion::$MODVERSION"          
 
       - name: Upload mod_harbour.v2.so/libmhapache.dll/Samples to artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: mod_harbour.V${{ steps.artifact.outputs.modversion }}_win64
           path: artifact
