@@ -149,7 +149,7 @@ jobs:
           if "${{ github.event.inputs.HBZEBRA }}" == "true" ( echo Include HBZEBRA >> .\artifact\notes.txt )
                    
       - name: Upload mod_harbour.v2.so/libmhapache.dll/Samples to artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: mod_harbour.V${{ steps.generate-name.outputs.modversion }}_${{ steps.generate-custom.outputs.custom }}_win64
           path: artifact
